@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Сертификатты верификациялау</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="verify-page">
+
+  <div class="ornament-top"></div>
+
+  <div class="verify-container ornament-border">
+    <h1 class="verify-title">Сертификатты верификациялау</h1>
+    <div id="certData" class="verify-box"></div>
+  </div>
+
+  <div class="ornament-bottom"></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  fetch("data.json")
+    .then(res => res.json())
+    .then(data => {
+      const cert = data.find(c => c.id === id);
+      const box = document.getElementById("certData");
+      if (!cert) {
+        box.innerHTML = "<p style='color:red;'>Сертификат табылмады</p>";
+        return;
+      }
+      box.innerHTML = `
+        <p><b>Аты-жөні:</b> ${cert.name}</p>
+        <p><b>Сертификат нөмірі:</b> ${cert.id}</p>
+        <p><b>Ұйым атауы:</b> ${cert.org}</p>
+        <p><b>Курс тақырыбы:</b> ${cert.course}</p>
+        <p><b>Сағат саны:</b> ${cert.hours}</p>
+        <p><b>Білім беру деңгейі:</b> ${cert.level}</p>
+        <p><b>Курс категориясы:</b> ${cert.category}</p>
+        <p><b>Пән:</b> ${cert.subject}</p>
+        <p><b>Басталу күні:</b> ${cert.start}</p>
+        <p><b>Аяқталу күні:</b> ${cert.end}</p>
+        <button class="print-btn" onclick="window.print()">PDF басып шығару</button>
+      `;
+    })
+    .catch(() => {
+      document.getElementById("certData").innerHTML =
+        "<p style='color:red;'>Мәліметтер базасы жүктелмеді</p>";
+    });
+</script>
+</body>
+</html>

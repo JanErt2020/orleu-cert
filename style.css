@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* --- Ornament Borders --- */
+.ornament-top, .ornament-bottom {
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg, 
+    #0078d7 0 15px,
+    #ffffff 15px 30px
+  );
+}
+.ornament-border {
+  border: 6px double #0072ce;
+  border-radius: 8px;
+}
+
+/* --- Certificate --- */
+.certificate-page {
+  background: #f8fbff;
+  padding: 40px;
+}
+.certificate-container {
+  background: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+.cert-title {
+  font-size: 42px;
+  color: #004b8c;
+}
+.cert-number {
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.cert-name {
+  font-size: 28px;
+  margin: 10px 0;
+}
+.cert-text {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.cert-org, .cert-date {
+  font-size: 18px;
+}
+.qr-block img {
+  width: 140px;
+  margin-top: 20px;
+}
+
+/* --- Verify --- */
+.verify-page {
+  background: #eef4ff;
+  padding: 40px;
+}
+.verify-container {
+  background: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.verify-title {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+.verify-box p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+.print-btn {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 18px;
+  background: #0080ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.print-btn:hover {
+  background: #005fd1;
+}
