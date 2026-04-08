@@ -1,88 +1,70 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
-/* --- Ornament Borders --- */
-.ornament-top, .ornament-bottom {
+/* Верхние и нижние декоративные полосы */
+.ornament-top,
+.ornament-bottom {
   height: 40px;
-  background: repeating-linear-gradient(
-    90deg, 
-    #0078d7 0 15px,
-    #ffffff 15px 30px
-  );
-}
-.ornament-border {
-  border: 6px double #0072ce;
-  border-radius: 8px;
+  background: repeating-linear-gradient(90deg, #0078d7 0 15px, #ffffff 15px 30px);
 }
 
-/* --- Certificate --- */
+/* Основной контейнер сертификата */
 .certificate-page {
-  background: #f8fbff;
+  background: #f5f8ff;
+  text-align: center;
   padding: 40px;
 }
+
 .certificate-container {
   background: #fff;
+  border: 3px solid #0072ce;
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px;
-  text-align: center;
-}
-.cert-title {
-  font-size: 42px;
-  color: #004b8c;
-}
-.cert-number {
-  margin-bottom: 25px;
-  font-weight: bold;
-}
-.cert-name {
-  font-size: 28px;
-  margin: 10px 0;
-}
-.cert-text {
-  font-size: 20px;
-  margin: 20px 0;
-}
-.cert-org, .cert-date {
-  font-size: 18px;
-}
-.qr-block img {
-  width: 140px;
-  margin-top: 20px;
+  padding: 60px 40px;
 }
 
-/* --- Verify --- */
-.verify-page {
-  background: #eef4ff;
-  padding: 40px;
+.cert-title {
+  font-size: 42px;
+  font-weight: bold;
+  color: #004b8c;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
 }
-.verify-container {
-  background: white;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 30px;
-}
-.verify-title {
-  text-align: center;
-  color: #004aad;
-  margin-bottom: 20px;
-}
-.verify-box p {
+
+.cert-number {
   font-size: 18px;
-  margin: 8px 0;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
 }
-.print-btn {
-  margin: 20px auto;
-  display: block;
-  padding: 10px 18px;
-  background: #0080ff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+
+.cert-name {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
-.print-btn:hover {
-  background: #005fd1;
+
+.cert-text {
+  font-size: 20px;
+  line-height: 1.5;
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
+.cert-hours {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.cert-org {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.cert-date {
+  font-size: 18px;
+  margin-top: 10px;
 }
